@@ -9,7 +9,7 @@
     - [Task List](#task-list)
     - [Tables](#tables)
     - [Pie Charts](#pie-charts)
-    - [What is version control:](#what-is-version-control)
+    - [Add changes log](#add-changes-log)
 
 
 ## Markdown
@@ -78,7 +78,7 @@ pie title smartphoneUsers
          "Pixel" :10
 ```
 
-### What is version control:
+### Add changes log 
 
 
 
