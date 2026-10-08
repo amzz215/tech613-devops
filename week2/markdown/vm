@@ -8,3 +8,38 @@ Once the virtual machine has been created a pair of keys must be created and pla
 - I need to first cd into the home directory using cd /.ssh/
 - then copy the ssh link provided by aws and paste it into git bash 
     * This will connect your git bash to the created virtual machine 
+
+## Linux Commands
+
+### Linux Commands 1 
+
+
+- `**/**` means root directory and `cd /` takes you directly to the root directory 
+- `/home` and home directory are different therefore ubuntu is the users's home directory 
+- `~`, `cd ~` are shortcuts to the general user home directory 
+  * pwd-prints the current directory 
+  * `ls`-lists files/folders but `ls -al`- list all files and folders includong hidden ones 
+  * `cd`-changes directory and `cd /` changes directory straight into the root directory
+  * `.` can mean current folder but also eveyrthing depending on the situation, `..` refers to the parent directory
+
+### Linux Commands 2
+- `mkdir`-makes a directory the folder/directory name afterwards either needs to be singular using a hyphen lse it will be read as multiple different directores being made 
+    * `mkdir hello-ameen`, makes the directory hello-ameen
+    * `mkdir hello ameen`, makes the directories hello and ameen as separate directories 
+    * If i genuinely want a directory with no hyphen in it then i need to use quotation marks, " `mkdir "hello ameen"` " will make a directory named "hello ameen"
+- `touch` creates an empty file 
+- `nano` edits a text file and if that file doesn't already exist then it will create it when it is saved.
+  * I need to **ctrl+s** and then **ctrl+x** to save and leave a text file 
+- `cat`-prints the contents of the file requested 
+
+### Linux Commands 3
+
+- `cp`-copies a file from its source to the requested destination, `cp cat.jpg cat-copy.jpg`
+- "**mv**"-isused to both move files/directories
+    * `mv cat.jpg funny-stuff/` moves the cat.jpg file into the folder funny-stuff
+    * `mv cat.jpg new-cat.jpg` changes the name from the cat.jpg to new-cat.jpg
+- How to find help is to teype a command then space `--help`
+    * `uname --help`
+- `history`-shows the last 500 commands entered into the terminal
+- The general structure to download things would be, `curl URL --output filename`
+- `chmod`-changes permissions of specific files for example `chmod 400 <**file**>`
