@@ -34,7 +34,7 @@ Example 4
   
 ### Italics and bold 
 
-*This is in italics *
+*This is in italics*
 
 The word **bold** is in bold 
 
@@ -67,7 +67,7 @@ mkdir folder_to_make
 Name    |   Street   |  Town
 --------|------------|----------
 Cathy   | Main St    | Birmingham
-John    | Maple Drive  | Stafford
+John    | Maple Drive| Stafford
 
 ### Pie Charts 
 

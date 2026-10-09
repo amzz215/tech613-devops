@@ -1,0 +1,13 @@
+# Linux - Redirection and appending
+
+## Questions: 
+
+1. What does `>` do?
+2. How is appending different?
+3. Give an example of a command where it appends to a file.
+
+## Answers:
+
+1. `>` replaces the content of the file
+2. Appending adds to the end of the file
+3. `ls >>msg.txt`

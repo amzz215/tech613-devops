@@ -1,0 +1,19 @@
+# Linux - Research managing file ownership
+
+## Questions:
+
+1. Why is managing file ownership important?
+2. What is the command to view file ownership?
+3. What permissions are set when a user creates a file or directory? Who does file or directory belong to?
+4. Why does the owner, by default, not receive X permissions when they create a file?
+5. What command is used to change the owner of a file or directory?
+
+## Answers:
+
+1. Prevents unauthorised users from accessing or modifying files. Determines who can read, write or execute files. Helps identify which user owns and is responsible for a file. Prevents random users from accidentally modifying important system files. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Mode-Structure.html)
+2. `ls -l`-Used to view file ownership. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/What-information-is-listed.html)
+3. Depends on what the user is to the team but it will usually be "**rw**" meaning the user can read and write on the file and if its a directory. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Mode-Structure.html)
+4.  Not all files are intended on being executable. [Reference Link](https://www.man7.org/linux/man-pages/man2/open.2.html)
+   * Regular files typically start with a maximum permission of 666 (rw-rw-rw-)
+   * Directories typically start with 777 (rwxrwxrwx)
+5. `sudo chown "user" notes.txt/directory_name` is used to change ownership of a file or directory. [Reference Link](https://www.gnu.org/s/coreutils/manual/html_node/chown-invocation.html)

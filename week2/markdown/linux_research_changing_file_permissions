@@ -1,0 +1,23 @@
+# Linux - Research changing file permissions
+
+## Questions: 
+
+1. What command changes file permissions?
+2. To change permissions on a file what must the end user be? (2 answers)
+3. Give examples of some different ways/syntaxes to set permissions on a new file (named testfile.txt) to:
+    1. Set User to read, Group to read + write + execute, and Other to read and write only
+    2.   Add execute permissions (to all entities)
+    3.   Take write permissions away from Group
+    4.   Use numeric values to give read + write access to User, read access to Group, and no access to Other.
+
+# Answers 
+
+1. The command `chmod` changes file permissions. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/chmod-invocation.html)
+2. To change permissions on a filethe user must be:
+   * The owner of the file.
+   * The root user (superuser) `sudo`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/chmod-invocation.html)
+3. Assuming I'm a super user: 
+   1. `sudo chmod 476 testfile.txt`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Symbolic-Modes.html)
+   2. `sudo chmod 111 testfile.txt`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Symbolic-Modes.html)
+   3. `sudo chmod g-w testfile.txt`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Symbolic-Modes.html)
+   4. `sudo chmod 640 testfile.txt`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Numeric-Modes.html) 

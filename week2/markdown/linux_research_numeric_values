@@ -1,0 +1,29 @@
+# Linux - Research managing file permissions using numeric values
+
+## Questions: 
+
+1. What numeric values are assigned to each permission?
+2. What numeric values would you use to assign read + write permissions?
+3. What numeric values would you use to assign read, write and execute permissions?
+4. What numeric values would you use to assign read and execute permissions?
+5. Often, a file or directory's mode/permissions are represented by 3 numbers. What do you think 644 would mean?
+
+## Answers:
+
+1. For each permission the correspondent numeric value are:
+   * `---`-0
+   * `--x`-1
+   * `-w-`-2
+   * `r--`-4
+   * `r-x`-5
+   * `rw-`-6
+   * `rwx`-7
+2. **read + write** is assigned with 600.
+3. **read + write + execute** are assigned with 700.
+4. **read + execute** will be assigned with 500.
+5. 644 would mean that the file is permitted for an: 
+   * User that is an Owner to read and write.
+   * User that is an Group to read only.
+   * User that is an Other to read only.
+
+[References Link](https://www.gnu.org/software/coreutils/manual/html_node/Numeric-Modes.html)

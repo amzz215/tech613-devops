@@ -1,0 +1,75 @@
+# Git Commands
+
+## Repositries
+
+### What is a Repository
+
+A repository is directory/folder that Git tracks, allowing it to record changes to files, maintain their history, and restore previous versions.
+
+A git repository will usually contain:
+* Files: Code, documents, images, and other project files.
+* Commit history: Records of saved changes to project.
+* Branches: Different lines of development that allow for work to happen on features independently.
+* Git metadata: Information Git needs to track changes, stored in a hidden .git directory.
+
+However to be very clear a `.git` folder is what makes a project folder a Git repository.
+
+To make a Git repository I will first:
+* `mkdir my-website`, which creates a directory.
+* `cd my-website` which moves into that directory.
+* `git init` which initialises a new Git repository in the current directory, this is what essentially creates the git repository. 
+* `git clone repository-url`, copies an existing remote repository, including its Git history, onto the local machine. I can use this command.
+
+### Remote vs Local Repositories
+
+Remote                   |Local
+-------------------------|-----------------------------------------
+Stored on your computer. |Stored on a remote server, such as GitHub.
+You make commits locally.|You can share commits with others.
+Works without internet.  |Generally requires a network connection to access.
+`git init`.              |`git push` sends commits to it.
+
+## What is Git
+
+Git is a version control system.
+
+## The three states of Git are:
+* **Modified** - A file has been changed in any way that hasnt been added to the staged state.
+    - To go from **Modified** to **Staged** we use the git command `git add .` to add all the modified files or `git add filename`, if i'm looking to stage a single file.
+* **Staged** - A modified file that has been added to the staged state but hasn't been committed into the commit state yet.
+    - To go from **Staged** to **Committed** we use the git command `git commit -m "Concise and clarifying message"`.
+* Committed - A staged file that has been commited to the commit state but hasn't yet been pushed to the github repository. 
+
+## Git Commands 1
+
+* `git status`, shows what is currently in the repository: untracked files, modified files, staged files, etc.
+* `git restore --staged filename`, this removes a file from the staging area without deleting your changes. 
+* `git log`, shows your commit history including information such as the commit ID/hash, author, date/time and commit message.
+* `git diff commit-id`, shows the difference between the current state and the specified commit.
+    - `git diff commit-id-1 commit-id-2`, shows the difference between two specified commits.
+* `git branch`, shows all local branches and indicates which branch you are currently on.
+* `git branch -M main`, renames the current branch to main. 
+  
+## Git Commands 2
+
+* `git checkout commit-id`, lets you check the repository as it existed at that commit. 
+* `git checkout main`, to return to the latest commit on main. 
+* `git reset --soft commit-id` and `git reset --hard commit-id`:
+  - soft Git moves HEAD to the target commit but leaves both your working tree and staging area/index unchanged. In the normal case, the changes from the removed commits therefore remain staged, ready to recommit. 
+  - Hard Git moves HEAD and updates the index and working tree to match the target commit. This can permanently discard tracked changes, so only use it when you genuinely want those changes gone.
+  - The commit ID in both these cases is the target commit ID, the one im trying to get to. 
+* `git remote add origin repository-url`, creates a remote called **origin** pointing to the supplied repository URL.
+* `git remote -v`, shows the remotes connected to the URLs. 
+* `git push -u origin main`, the -u sets origin/main as the upstream, making later pushes simpler as I can just `git push`.
+* `git pull origin main`, pulls in any files that has been added to the github but isn't already in my local repository.
+
+## Git Commands 3
+
+* `git switch -c branch-name`, creates a new branch and switches to it. 
+* From this branch I can add and commit like normal to the commited state of git then when I swithc back to the main branch I am able to **merge** that branch with main using `git switch main` and then `git merge branch-name`.
+* If another developer pushes something to a shared github I can use `git fetch origin` to retrieve new information and update the relevant remote-tracking references, but it doesn't automatically merge those changes into your local main. I still need to `git pull origin main` to do that.
+
+
+
+
+  

@@ -1,0 +1,40 @@
+# Linux - Streams 
+
+## Questions: 
+
+1. What is a stream in Linux?
+2. What are the 3 data streams?
+3. Create a new file new.txt and run the command ls missing_directory new.txt - this should give output to two different streams.
+4. How can we direct each stream to a file (one at a time)?
+5. How can we direct both 2 output streams to a file?
+6. Which stream is directed to a file by default?
+7. How can we direct both output streams to a file in one command?
+
+## Answers:
+
+1. A stream is a flow of data between a program and an input or output destination, such as a terminal or file. Linux uses streams to allow programs to receive input, display results and report errors. [Reference Link](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+2. The three data streams are: 
+
+        Stream  |Name               |File descriptor   |Purpose
+        --------|-------------------|------------------|------------------------------------------
+        `stdin` | Standard Input    | 0                | Receives input, usually from the keyboard
+        `stdout`| Standard Output   | 1                | Displays normal command output
+        `stderr`| Standout Error    | 2                | Displays error messages
+    [Reference Link](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+3. `touch new.txt`, `ls missing_directory new.txt`. Error Message: `ls: cannot access 'missing_directory': No such file or directory
+new.txt`.
+    * new.txt is written into output.txt.
+    * The error message still appears in the terminal.
+[Reference Link](https://www.man7.org/linux/man-pages/man1/bash.1.html)
+4. Redirect Standard Output: `ls missing_directory new.txt > output.txt`. Redirect Standard Error: `ls missing_directory new.txt 2> errors.txt`.
+   *  The error message is written into errors.txt.
+   *  new.txt still appears in the terminal.
+   *  The > symbol redirects output, and 2> specifically redirects standard error.
+[Reference Link](https://www.man7.org/linux/man-pages/man1/bash.1.html)
+5. `ls missing_directory new.txt > output.txt 2> errors.txt`. [Reference Link](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+6. Standard output (stdout, file descriptor **1**) is redirected by default when using **>** without a file descriptor number. [Reference Link](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+7. `ls missing_directory new.txt > combined.txt 2>&1`
+    * `>` redirects standard output to `combined.txt`.
+    * `2>&1` redirects standard error (**2**) to the same destination as standard output (**1**).
+[Reference Link](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+

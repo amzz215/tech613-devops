@@ -1,0 +1,33 @@
+# Linux - Research managing file permissions
+
+## Questions: 
+
+1. Does being the owner of a file mean you have full permissions on that file? Explain.
+2. If you give permissions to the User entity, what does this mean?
+3. If you give permissions to the Group entity, what does this mean?
+4. If you give permissions to the Other entity, what does this mean?
+5. You give the following permissions to a file: User permissions are read-only, Group permissions are read and write, Other permissions are read, write and execute. 
+You are logged in as the user which is owner of the file. What permissions will you have on this file? Explain.
+6. Here is one line from the ls -l. Work everything you can about permissions on this file or directory.
+
+## Answers: 
+
+1. No. Being the owner of a file does not automatically mean you have full permissions. For example, an owner may have read-only permissions `r--`, meaning they cannot modify or execute the file. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Mode-Structure.html)
+2. The User entity **u** represents the file's owner. Permissions assigned to this entity determine whether the owner can read, write or execute the file. [Reference Link](https://www.gnu.org/s/coreutils/manual/html_node/Setting-Permissions.html)
+3. The Group entity **g** represents users who belong to the group associated with the file, excluding the owner when determining which permission class applies. For example, `chmod g+rw filename` gives the group, read and write permissions. [Reference Link](https://manpages.debian.org/trixie/coreutils/chmod.1.en.html)
+4. The Other entity **o** represents users who are neither the file's owner nor members of its owning group. [Reference Link](https://www.gnu.org/s/coreutils/manual/html_node/Setting-Permissions.html)
+5. Read-only `r--` permissions, even though the Group and Other categories have more permissions. This is because Linux uses the owner's permission bits when the user accessing the file is its owner. It does not combine permissions from the User, Group and Other categories. [Reference Link](https://man7.org/linux/man-pages/man7/path_resolution.7.html)
+6. ```bash
+   -rwxr-xr-- 1 tcboony staff 123 Nov 25 18:36 keeprunning.sh
+   ```
+   * `-` means that it is a file.
+   * **rwx** means Owner can read, write and execute thus has a number of **7**.
+   * **r-x** means Group can read and execute but not write thus they have a number of **5**.
+   * **r--** means that Other can read the file but not write or execute thus they have a number of **4**.
+   * File has 1 hard link denoted the the 1 after the GOP denotation at the beginning. 
+   * **tcboony** is the file owner 
+   * **123** is the file size in bytes 
+   * **Nov 25 18:36** is the date and time it was last modified omitting the year.
+   * **keeprunning.sh** is the file name and what type of script it is, in this case it is a shell script.
+[Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/What-information-is-listed.html)
+

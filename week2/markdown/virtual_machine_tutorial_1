@@ -5,7 +5,6 @@ Once the virtual machine has been created a pair of keys must be created and pla
 ## Connectivity 
 
 - Once key pairs have been moved to the .ssh file we need to move to the .ssh file from the home directory 
-- I need to first cd into the home directory using cd /.ssh/
 - then copy the ssh link provided by aws and paste it into git bash 
     * This will connect your git bash to the created virtual machine 
 
