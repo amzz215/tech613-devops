@@ -13,11 +13,11 @@
 # Answers 
 
 1. The command `chmod` changes file permissions. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/chmod-invocation.html)
-2. To change permissions on a filethe user must be:
+2. To change permissions on a file the user must be:
    * The owner of the file.
    * The root user (superuser) `sudo`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/chmod-invocation.html)
 3. Assuming I'm a super user: 
    1. `sudo chmod 476 testfile.txt`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Symbolic-Modes.html)
-   2. `sudo chmod 111 testfile.txt`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Symbolic-Modes.html)
+   2. `sudo chmod a+x testfile.txt`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Symbolic-Modes.html)
    3. `sudo chmod g-w testfile.txt`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Symbolic-Modes.html)
    4. `sudo chmod 640 testfile.txt`. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Numeric-Modes.html) 

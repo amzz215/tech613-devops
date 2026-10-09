@@ -38,7 +38,7 @@ Git is a version control system.
     - To go from **Modified** to **Staged** we use the git command `git add .` to add all the modified files or `git add filename`, if i'm looking to stage a single file.
 * **Staged** - A modified file that has been added to the staged state but hasn't been committed into the commit state yet.
     - To go from **Staged** to **Committed** we use the git command `git commit -m "Concise and clarifying message"`.
-* Committed - A staged file that has been commited to the commit state but hasn't yet been pushed to the github repository. 
+* **Committed** - A staged file that has been commited to the commit state but hasn't yet been pushed to the github repository. 
 
 ## Git Commands 1
 

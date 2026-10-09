@@ -1,0 +1,90 @@
+# Variables 
+
+## What is a variable? 
+
+A variable isa named value that can be referenced in your shell or script. 
+
+* `MY_NAME="Alex"`, creates a variable called **MY_NAME** containing the value **Alex**.
+* To display this variable I enter the command `echo "$MY_NAME"`. This will output **Alex**.
+* The `$` tells Bash to expand the variable to its stored value.
+
+## What makes an environment variable different?
+
+An environment variable is an exported variable that can be inherited by programs or child processes started from that shell.
+
+Shell Variable                |Exported Variable 
+------------------------------|----------------------------------------------------------
+Available in the current shell|Also inherited by the child processes and subsequent tools
+
+* So assuming I created a variable as normal, if I then `printenv MY_NAME` this will export that variable converting it into a **Environment** variable. 
+* Now if I `printenv MY_NAME`, it will output **Alex**, as before it wouldn't of worked.
+* Additionally, we can create and export a variable in one comand being `export MY_NAME="Alex"`.
+
+An oridinary shell variable is used when a value is needed in the same script. e.g:
+ ```bash
+  PACKAGE="nginx"
+
+  sudo apt-get install "$PACKAGE"
+  sudo systemctl restart "$PACKAGE"
+  ```
+Since this variable is only needed in this script a shell variable is sufficient. 
+
+However, if a child program also need the same variable then I would use a environment variable.
+
+## Why do environment variables disappear?
+
+Suppose I created the environment variable **Ameen**, once I end my session, if I log back into the session the variable isn't automatically recreated. 
+
+To mitigate this I would:
+* `nano ~/.bashrc`, then at the very end of the file add `export MY_NAME="ameen"`. 
+* This will ensure the the variable `MY_Name` will always be recreated when I log back into a session. 
+
+Crucial distinction: The variable is not continuously surviving in memory. It is being recreated when the startup configuration runs.
+
+After editing `.bashrc`, I don't need to close and reopen my session terminal to check that it worked. I can simply:
+* `source ~/.bashrc`, to execute the commands inside .bashrc in the current shell, applying those settings immediately.
+* Then I `printenv MY_NAME`, to test it. This should output.
+* `./script.sh`, runs an executable script whereas `source script.sh` executes the script's commands in the current shell, so changes such as variable assignments can affect that shell.
+
+## What is a Linux process? 
+
+A process is a running instance of a program. Each process has its own process ID(PID) including idle processes.
+
+A PID is simply an identifier for process. 
+
+A user process is a process that is likely assoiated with an interactive session whereas a system process is a system service a process that can run a system service without an interactive terminal being open. 
+
+* `ps`, is used to take a snapshot of the processes being ran within the current terminal. With `ps -a` or `ps -al` showing processes being ran. 
+* `ps aux`, a more detailed system wide snapshot. 
+* `top`, displys the regularly updated process information.
+    - Within top you can change the sorting with **shift+p** to sort by cpu usage.
+    - **shift+m** to sort by memory usage.
+    - **shift+n** to sort by PID.
+* `htop`, provides a colourful presentation of the live processes.
+
+## Foreground and Background
+
+Foreground processes occur when the shell waits for these processes to finish. e.g:
+* `sleep 5`, will wait 5seconds before I have access to my terminal again. `sleep 5000`, will wait 5000 seconds before I have terminal access again.
+
+Background processes can run while I still have access to my terminal. e.g: 
+* `sleep 5000 &`, will run the same wait for 5000 seconds process but in the background so I still have access to my terminal. 
+* `jobs`, inspects jobs managed by the current shell.
+
+## Kills and its different levels
+
+There are 64 levels of kills the but main three are:
+* `kill -1 PID`, this is the softest most graceful level of kill that will try to kill the child processes first before moving on the the parent process.
+* `kill -15 PID`, this is the default kill, its still clasified as a soft/graceful kill but it is more harsh than the `-1`. This kill is also the sme as if i just used the command `kill PID`. 
+* `kill -9 PID`, this level of kill is forced termination and the harshest level of kill as it will kill the parent process first but not neccessarily the child processes which could lead to zombie and/or orphan processes that take up some memory. 
+* This is why we start of with the sofest level of kill before moving on the the harsher levels to prevent zombie and/or orphan processes 
+* The reason the harsher processes don't always work is because they stop the child processes first but the parent process is remains running so it can just make a clone of that child process with a different PID so it's as if the child process wasn't killed at all.
+* A orphan process is a still-running child whose original parent has terminated. 
+* A zombie process is a child that has already terminated, but whose exit status has not yet been collected by its parent.
+
+### Parent and child processes
+
+A parent process is a process that creates another process. The new process is its child.
+
+* To inspect parent-child relationships I can use the command `ps -ef`, which displays the PID and parent process ID(PPID). 
+

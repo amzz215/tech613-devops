@@ -1,0 +1,35 @@
+# Essential Linux Commands Explained
+
+## Update vs Upgrade, sudo and other Users 
+
+* `sudo apt-get update`-update finds the newer package versions that are available.
+* `sudo apt-get upgrade -y`-actually installs the newer packages with the `-y` answering yes to most prompts.
+* `apt`is fine for terminals but apt-get works on scripts so it's better to just use apt-get.
+* `/`- is the root directory, `root`-root user/superuser, `/root`-the root user's home directory.
+    - the root directory being the directory the  top of the file system.
+* `.`-current directory.
+* `~`-home directory.
+* `..`-parent directory.
+* `rm filename`-deletes a filename however `rm -r filename` recursively deletes a a directory.
+
+## Linux Commands 1
+
+* `tree`, shows the hierarchy of a directory including subdirectories and files.
+* if it isn't already installed then we use `sudo apt-get update`, then `sudo apt-get install applicationName`.
+* `head -n 2 filename`, is used to get the first two lines of a line.
+* `tail -n 2 filename`, is used to get the last two lines of a file.
+* `nl filename`, is used to number all the lines of a file.
+* In `cat file.txt | grep "hello"`, the `|` essentially takes the first half of the command as input for the second half od the command. So in this scenario the terminal will output all line in the file.txt file that has the word "hello", run command 1 and feed that output into command 2. Similarly, `grep "hello" file.txt` does the same thing.
+
+## Bash Scripts
+
+* At the top of every bash script there must be a shebang so that the script knows it is running linux `#!/bin/bash` using bash.
+* `sudo systemctl restart nginx`-restarts nginx.
+* `sudo systemctl enable nginx`-enables nginx.
+
+`systemctl` is a tool introduced to control system services/processes
+* `systemctl status nginx`, shows whether Nginx is active, running, enabled, etc.
+    - `sudo systemctl stop nginx`, stops nginx
+    - `sudo systemctl start nginx`, starts nginx
+    - `sudo systemctl restart nginx`, restarts nginx, after changing nginx configuration, a restart makes the new configuration take effect.
+    - `sudo systemctl enable nginx`, start nginx automatically when the machine boots by adding the service to the machine's startup list.. 
