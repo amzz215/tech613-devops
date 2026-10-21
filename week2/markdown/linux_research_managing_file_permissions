@@ -11,7 +11,6 @@ You are logged in as the user which is owner of the file. What permissions will 
 6. Here is one line from the ls -l. Work everything you can about permissions on this file or directory.
 
 ## Answers: 
-
 1. No. Being the owner of a file does not automatically mean you have full permissions. For example, an owner may have read-only permissions `r--`, meaning they cannot modify or execute the file. [Reference Link](https://www.gnu.org/software/coreutils/manual/html_node/Mode-Structure.html)
 2. The User entity **u** represents the file's owner. Permissions assigned to this entity determine whether the owner can read, write or execute the file. [Reference Link](https://www.gnu.org/s/coreutils/manual/html_node/Setting-Permissions.html)
 3. The Group entity **g** represents users who belong to the group associated with the file, excluding the owner when determining which permission class applies. For example, `chmod g+rw filename` gives the group, read and write permissions. [Reference Link](https://manpages.debian.org/trixie/coreutils/chmod.1.en.html)
