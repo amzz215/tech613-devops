@@ -136,13 +136,19 @@ For most cloud providers it will either b experience within the field such is th
 
 ### EC2 instances — virtual machines
 
-Amazon EC2 stands for Elastic Compute Cloud. An EC2 instance is a virtual machine—a computer provided through AWS’s infrastructure.
+Amazon EC2 stands for Elastic Compute Cloud. An EC2 instance is a virtual machine—a computer provided through AWS’s infrastructure. Virtualisation lets you use a portion of those resources as your own virtual computer.
+
+| Word | Meaning |
+|---|---|
+| **Elastic** | Obtain more capacity when needed and release it when no longer needed |
+| **Compute** | Computing resources, particularly processing power and memory |
+| **Cloud** | Resources provided through AWS |
 
 ### Ports 
 
 A port is a numbered network endpoint that helps direct traffic to the correct application or service on a machine 
 
-Using a door analogy: the IP address identifies the machine, and the port identifies which service you want to reach on it.
+Using a door analogy: the IP address identifies the machine, and the port identifies which service you want to reach on it. A numbered room on a server where a network service can be reached.
 
 | Port | Typical use |
 |---|---|
@@ -179,6 +185,13 @@ An AWS security group acts as a virtual firewall for your EC2 instance. Its rule
 | **Inbound** | Traffic coming **into** your VM | Your laptop connecting through SSH |
 | **Outbound** | Traffic going **from** your VM | Your VM downloading software |
 
+
+| Protocol and port | Source | What it allows |
+|---|---|---|
+| TCP **22** | Your public IP | SSH connections from your location |
+| TCP **80** | `0.0.0.0/0` | HTTP connections from any IPv4 address |
+| TCP **3000** | Your public IP | Direct app access from your location |
+
 Each rule has source: who may connect. For example, your public IP limits access to that address. But if we make the source all 0s this allows connections for all IP addresses. 
 
 SCP securely transfers files over an SSH connection. 
@@ -190,8 +203,3 @@ A region is a geographical area where AWS operates infrastructure, such as Europ
 
 Availability Zones: 
 A region contains multiple zones and each zone has multiple centres with separate power, networking, and connectivity, designed to isolate failures. If one centre goes offline for whatever reason. 
-
-
-
-
-
