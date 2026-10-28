@@ -10,4 +10,4 @@
 6. This should work but if it doesnt then Continue with the next commands. 
 7. After that run `sudo -E node seeds/seed.js`
 8. Run this command afterwards `sudo -E pm2 restart tictactoe --update-env || sudo -E pm2 start npm --name tictactoe -- start`
-9. `sudo env PM2_HOME=/home/ubuntu/.pm2 pm2 save`, saves the process for the next command 
+9. `sudo env PM2_HOME=/home/ubuntu/.pm2 pm2 save`, saves the process for the next command cd week5
