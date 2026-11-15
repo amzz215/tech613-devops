@@ -1,19 +1,19 @@
 # Virtual Machine 
 
-Once the virtual machine has been created a pair of keys must be created and placed within the .ssh file 
+Once the virtual machine has been created I need to create a pair of keys and place them within the .ssh file 
 
 ## Connectivity 
 
-- Once key pairs have been moved to the .ssh file we need to move to the .ssh file from the home directory 
-- then copy the ssh link provided by aws and paste it into git bash 
-    * This will connect your git bash to the created virtual machine 
+- Once key pairs have been moved to the .ssh file I need to move to the .ssh file from the home directory 
+- then I copy the ssh link provided by aws and paste it into git bash 
+    * This will connect my git bash to the created virtual machine 
 
 ## Linux Commands
 
 ### Linux Commands 1 
 
 
-- `**/**` means root directory and `cd /` takes you directly to the root directory 
+- `**/**` means root directory and `cd /` takes me directly to the root directory 
 - `/home` and home directory are different therefore ubuntu is the users's home directory 
 - `~`, `cd ~` are shortcuts to the general user home directory 
   * pwd-prints the current directory 
@@ -25,7 +25,7 @@ Once the virtual machine has been created a pair of keys must be created and pla
 - `mkdir`-makes a directory the folder/directory name afterwards either needs to be singular using a hyphen lse it will be read as multiple different directores being made 
     * `mkdir hello-ameen`, makes the directory hello-ameen
     * `mkdir hello ameen`, makes the directories hello and ameen as separate directories 
-    * If i genuinely want a directory with no hyphen in it then i need to use quotation marks, " `mkdir "hello ameen"` " will make a directory named "hello ameen"
+    * If I genuinely want a directory with no hyphen in it then I need to use quotation marks, " `mkdir "hello ameen"` " will make a directory named "hello ameen"
 - `touch` creates an empty file 
 - `nano` edits a text file and if that file doesn't already exist then it will create it when it is saved.
   * I need to **ctrl+s** and then **ctrl+x** to save and leave a text file 

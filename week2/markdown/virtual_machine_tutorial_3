@@ -2,7 +2,7 @@
 
 ## What is a variable? 
 
-A variable isa named value that can be referenced in your shell or script. 
+A variable isa named value that can be referenced in my shell or script. 
 
 * `MY_NAME="Alex"`, creates a variable called **MY_NAME** containing the value **Alex**.
 * To display this variable I enter the command `echo "$MY_NAME"`. This will output **Alex**.
@@ -18,7 +18,7 @@ Available in the current shell|Also inherited by the child processes and subsequ
 
 * So assuming I created a variable as normal, if I then `printenv MY_NAME` this will export that variable converting it into a **Environment** variable. 
 * Now if I `printenv MY_NAME`, it will output **Alex**, as before it wouldn't of worked.
-* Additionally, we can create and export a variable in one comand being `export MY_NAME="Alex"`.
+* Additionally, I can create and export a variable in one comand being `export MY_NAME="Alex"`.
 
 An oridinary shell variable is used when a value is needed in the same script. e.g:
  ```bash
@@ -36,7 +36,7 @@ However, if a child program also need the same variable then I would use a envir
 Suppose I created the environment variable **Ameen**, once I end my session, if I log back into the session the variable isn't automatically recreated. 
 
 To mitigate this I would:
-* `nano ~/.bashrc`, then at the very end of the file add `export MY_NAME="ameen"`. 
+* `nano ~/.bashrc`, then at the very end of the file I add `export MY_NAME="ameen"`. 
 * This will ensure the the variable `MY_Name` will always be recreated when I log back into a session. 
 
 Crucial distinction: The variable is not continuously surviving in memory. It is being recreated when the startup configuration runs.
@@ -57,7 +57,7 @@ A user process is a process that is likely assoiated with an interactive session
 * `ps`, is used to take a snapshot of the processes being ran within the current terminal. With `ps -a` or `ps -al` showing processes being ran. 
 * `ps aux`, a more detailed system wide snapshot. 
 * `top`, displys the regularly updated process information.
-    - Within top you can change the sorting with **shift+p** to sort by cpu usage.
+    - Within top I can change the sorting with **shift+p** to sort by cpu usage.
     - **shift+m** to sort by memory usage.
     - **shift+n** to sort by PID.
 * `htop`, provides a colourful presentation of the live processes.
@@ -75,9 +75,9 @@ Background processes can run while I still have access to my terminal. e.g:
 
 There are 64 levels of kills the but main three are:
 * `kill -1 PID`, this is the softest most graceful level of kill that will try to kill the child processes first before moving on the the parent process.
-* `kill -15 PID`, this is the default kill, its still clasified as a soft/graceful kill but it is more harsh than the `-1`. This kill is also the sme as if i just used the command `kill PID`. 
+* `kill -15 PID`, this is the default kill, its still clasified as a soft/graceful kill but it is more harsh than the `-1`. This kill is also the sme as if I just used the command `kill PID`. 
 * `kill -9 PID`, this level of kill is forced termination and the harshest level of kill as it will kill the parent process first but not neccessarily the child processes which could lead to zombie and/or orphan processes that take up some memory. 
-* This is why we start of with the sofest level of kill before moving on the the harsher levels to prevent zombie and/or orphan processes 
+* This is why I start of with the sofest level of kill before moving on the the harsher levels to prevent zombie and/or orphan processes 
 * The reason the harsher processes don't always work is because they stop the child processes first but the parent process is remains running so it can just make a clone of that child process with a different PID so it's as if the child process wasn't killed at all.
 * A orphan process is a still-running child whose original parent has terminated. 
 * A zombie process is a child that has already terminated, but whose exit status has not yet been collected by its parent.

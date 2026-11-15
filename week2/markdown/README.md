@@ -40,10 +40,10 @@ The word **bold** is in bold
 
 ### Images and links 
 This is the image embedded
-![pic](images\DBZ-Goku-PNG-Transparent-Image.png)
+![pic](../../images/DBZ-Goku-PNG-Transparent-Image.png) 
 
 This is the link (remove the ! at the beginning to create a link)
-[alt text](images/DBZ-Goku-PNG-Transparent-Image.png)
+[alt text](../../images/DBZ-Goku-PNG-Transparent-Image.png)
 
 ###Marking Code 
 

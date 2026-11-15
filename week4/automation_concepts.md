@@ -6,27 +6,27 @@ Foreground and background describe how a program runs in relation to the termina
 
 | | Foreground | Background |
 |---|---|---|
-| Terminal | Waits for the program to finish | Lets you enter more commands |
+| Terminal | Waits for the program to finish | Lets me enter more commands |
 | Output | Usually appears directly in the terminal | Can be redirected or managed through logs |
 | Example | Running `npm start` directly | Running the app through PM2 |
 
 ### PM2 
 
-PM2 is a process manager. It runs your app in the background and can restart it if it crashes. 
+PM2 is a process manager. It runs my app in the background and can restart it if it crashes. 
 
-PM2 keeps the app managed after you disconnect SSH. Restoring it afer a VM reboot also requires startup configuration and a saved process list. 
+PM2 keeps the app managed after I disconnect SSH. Restoring it afer a VM reboot also requires startup configuration and a saved process list. 
 
 ### Idempotency 
 
 An operation is idempotent if repeating it leaves the same  intended state as running it once. 
-For your provisioning script, the gol is: the app is installed and one managed instance is running.
+For my provisioning script, the gol is: the app is installed and one managed instance is running.
 
 Running setup again should leave a working setup, without unwanted duplicates or broken state.
 
 ### Proxies and forward proxies
 
 A proxy acts on behalf of someone or something else.
-A forward proxy acts on behalf of the client, such as your laptop. Your requests go through it before reaching the destination server. 
+A forward proxy acts on behalf of the client, such as my laptop. My requests go through it before reaching the destination server. 
 
 ### Reverse proxies — acting on behalf of the server
 
@@ -37,12 +37,21 @@ A reverse proxy receives requests from clients and forwards them to the appropri
 | **Forward proxy** | The client requesting something |
 | **Reverse proxy** | The server providing something |
 
-1. Your browser requests http://<VM-public-IP> on port 80
+1. My browser requests http://<VM-public-IP> on port 80
 2. Nginx receives the request
-3. Nginx forwards it to your Tic-Tac-Toe app on port 3000
-4. The app’s response returns through Nginx to your browser
+3. Nginx forwards it to my Tic-Tac-Toe app on port 3000
+4. The app’s response returns through Nginx to my browser
 
 `proxy_pass`- Specifies the destination for forwarded requests.
+
+### IP addresses — identifying a machine on a network
+
+An IP address helps network traffic reach the correct destination. 
+
+| Address type | Purpose | My EC2 example |
+|---|---|---|
+| **Public IP** | Address used for communication over the public internet | My laptop uses it to reach the VM |
+| **Private IP** | Address used within a private network | Instances can use it to communicate within their AWS network |
 
 ### Automating file edits with sed
 
@@ -59,7 +68,7 @@ A reverse proxy receives requests from clients and forwards them to the appropri
 
 ### Load balancing — sharing requests across servers
 
-Local balancing distirbutes incoming requests across multiple servers running your application. 
+Local balancing distirbutes incoming requests across multiple servers running my application. 
 
 | Request | Illustrative destination |
 |---|---|
@@ -82,7 +91,7 @@ Caching avoids repeating some work.
 
 Https termination is when the reverse proxy handles the browser's encrytped HTTPS connection.
 
-“Termination” refers to where that TLS connection ends. You can also encrypt the separate connection from the proxy to the backend when needed. 
+“Termination” refers to where that TLS connection ends. I can also encrypt the separate connection from the proxy to the backend when needed. 
 
 
 

@@ -4,11 +4,11 @@
 
 1. What is a stream in Linux?
 2. What are the 3 data streams?
-3. Create a new file new.txt and run the command ls missing_directory new.txt - this should give output to two different streams.
-4. How can we direct each stream to a file (one at a time)?
-5. How can we direct both 2 output streams to a file?
+3. I create a new file new.txt and run the command ls missing_directory new.txt - this should give output to two different streams.
+4. How can I direct each stream to a file (one at a time)?
+5. How can I direct both 2 output streams to a file?
 6. Which stream is directed to a file by default?
-7. How can we direct both output streams to a file in one command?
+7. How can I direct both output streams to a file in one command?
 
 ## Answers:
 

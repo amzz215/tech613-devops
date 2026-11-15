@@ -15,7 +15,7 @@
 ## Linux Commands 1
 
 * `tree`, shows the hierarchy of a directory including subdirectories and files.
-* if it isn't already installed then we use `sudo apt-get update`, then `sudo apt-get install applicationName`.
+* if it isn't already installed then I use `sudo apt-get update`, then `sudo apt-get install applicationName`.
 * `head -n 2 filename`, is used to get the first two lines of a line.
 * `tail -n 2 filename`, is used to get the last two lines of a file.
 * `nl filename`, is used to number all the lines of a file.

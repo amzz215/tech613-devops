@@ -2,34 +2,34 @@
 
 ### Create Appropriate Instance 
 
-Instance must contain ports for 22, 80 and 3000
+My instance must contain ports for 22, 80 and 3000
 1. 22 port is the default port for ssh which is a secure way to connect to a rmeote shell via encryptions. 
 2. 80 port is for Http 
 3. 3000 port is for web apps like node.js
 
 ### Connect to Instance 
 
-Connect to the instance using the public DNS 
-1. `cd` into the .ssh file then run the command given by aws to connect to the public DNS. 
+I connect to the instance using the public DNS 
+1. I `cd` into the .ssh file then run the command given by aws to connect to the public DNS. 
 
 ### Move the file from the local machine into the ubuntu machine 
 
-1. Use the `scp` command to move the file to the ubuntu machine 
-2. First we want to `cd` into where the filewe want to move is in and in this scenario it's in downloads.
-3.  `scp -i ~/.ssh/tech613-ameen-aws-key.pem nodejs20-sparta-tictactoe-v1.zip ubuntu@34.245.218.237:/home/ubuntu/` - from the home directory go into the .ssh folder and get my key stored in the .pem file and use that key to authenticate that I can access that ubuntu machine. Then I usa a space and provide the file i want to move to the ubuntu machine in this case that is the nodejs-naughts and crosses file and then i provide another space and i provide which ubuntu machine i am reting to move my file to i do this by adding `ubuntu@` then the public IP address that can be found at my aws instance summary followed by a `:`followed by `/home/ubuntu/`
-4.  I should be prompted to confirm that I am trying to add ubuntu as a known host. This is because it is my first time doing so but if i was to theoretically add to the same host again i shouldn't get that message. 
-5.  To confirm that the command worked and that my file is at my host i should `ls` on the git bash of my ubuntu host and i should see the file there. 
+1. I use the `scp` command to move the file to the ubuntu machine 
+2. First I want to `cd` into where the file I want to move is in and in this scenario it's in downloads.
+3.  `scp -i ~/.ssh/tech613-ameen-aws-key.pem nodejs20-sparta-tictactoe-v1.zip ubuntu@34.245.218.237:/home/ubuntu/` - from the home directory I go into the .ssh folder and get my key stored in the .pem file and use that key to authenticate that I can access that ubuntu machine. Then I usa a space and provide the file I want to move to the ubuntu machine in this case that is the nodejs-naughts and crosses file and then I provide another space and I provide which ubuntu machine I am reting to move my file to I do this by adding `ubuntu@` then the public IP address that can be found at my aws instance summary followed by a `:`followed by `/home/ubuntu/`
+4.  I should be prompted to confirm that I am trying to add ubuntu as a known host. This is because it is my first time doing so but if I was to theoretically add to the same host again I shouldn't get that message. 
+5.  To confirm that the command worked and that my file is at my host I should `ls` on the git bash of my ubuntu host and I should see the file there. 
 
 ### Download the file into the Ubuntu host server 
 1. `sudo apt update` - check that all the packages are up to date
 2. `sudo apt upgrade -y` - this actually downlaods those up to date packages saying yes to all prompts
 3. `sudo apt install unzip -y`
 4. `sudo unzip filename.zip` - this and the previous step is only done if the file is azip file.
-5. `sudo apt install nginx -y` - this opens on port 80 because its a web app. Check if nginx is open by coping the public ip into an browser then change https into http and nginx should welcome me. 
+5. `sudo apt install nginx -y` - this opens on port 80 because its a web app. I check if nginx is open by coping the public ip into an browser then change https into http and nginx should welcome me. 
 6. `curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh` - installs a specific version of nodejs
 7. `sudo bash nodesource_setup.sh` - 
 8. `sudo apt install nodejs -y`
-9. `node -v` - gets the version of nodejs we're using
+9. `node -v` - gets the version of nodejs I'm using
 10. `cd app`
 11. `npm install`
 12. `npm start`
