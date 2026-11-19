@@ -2,7 +2,7 @@
 
 ## What is a variable? 
 
-A variable isa named value that can be referenced in my shell or script. 
+A variable is a named value that can be referenced in my shell or script. 
 
 * `MY_NAME="Alex"`, creates a variable called **MY_NAME** containing the value **Alex**.
 * To display this variable I enter the command `echo "$MY_NAME"`. This will output **Alex**.

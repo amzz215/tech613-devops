@@ -21,8 +21,6 @@ For the app alone, I need:
 **Why am I learning this?**  
 To understand what each component contributes to a working cloud deployment, rather than only memorising installation commands.
 
-**Transcript reference:** Week 6 — Main call recording 1, 00:34:28–00:38:19.
-
 ## 2. On a clean Ubuntu instance, what must I install or configure for a monolithic deployment, and why?
 
 For this exercise, the deployment runs the app on one instance without a separate database.
@@ -94,8 +92,6 @@ Opening port 80 in the security group only permits traffic. It does not configur
 **Why am I learning this?**  
 To understand the difference between running an application, managing its process, allowing network traffic and forwarding requests.
 
-**Transcript reference:** Week 6 — Main call recording 1, 00:38:30–00:50:14.
-
 ## 3. What does a two-tier deployment mean?
 
 A two-tier deployment separates the application and database into two tiers.
@@ -114,8 +110,6 @@ The app connects to MongoDB over the network.
 To understand how an application uses a separate database and what additional networking and configuration that requires.
 
 Separating the tiers also allows me to manage the app and database independently.
-
-**Transcript reference:** Week 6 — Main call recording 1, 00:51:14–01:02:46 and 01:21:58–01:23:17.
 
 ## 4. What extra steps are needed to change my app deployment into a two-tier deployment?
 

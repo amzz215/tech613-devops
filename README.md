@@ -16,6 +16,7 @@ Links to every project file and folder. Git internal files are excluded.
 - [week5/](./week5/)
 - [week6/](./week6/)
 - [Week7/](./Week7/)
+- [week8/](./week8/)
 - [.gitignore](./.gitignore)
 - [interview.md](./interview.md)
 - [README.md](./README.md)
@@ -177,3 +178,13 @@ Links to every project file and folder. Git internal files are excluded.
 - [cicd-setup.md](./Week7/cicd-setup.md)
 - [CICD.md](./Week7/CICD.md)
 - [ssh-setup.md](./Week7/ssh-setup.md)
+
+## week8
+
+[Open folder](./week8/)
+
+- [docker-compose.md](./week8/docker-compose.md)
+- [docker-html.md](./week8/docker-html.md)
+- [docker-nginx.md](./week8/docker-nginx.md)
+- [docker-ttt-app.md](./week8/docker-ttt-app.md)
+- [docker.md](./week8/docker.md)

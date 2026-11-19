@@ -6,7 +6,7 @@
 
 CI means regularly merging small code changes into shared codebase and using automated checks to catch problems early. 
 
-This is done because developers could be making frequent changes separately for months and only discover at the end that their code doesn't work together. The pipeline also acts as a extra safety net but manual testing sytills needs to occur. 
+This is done because developers could be making frequent changes separately for months and only discover at the end that their code doesn't work together. The pipeline also acts as a extra safety net but manual testing stills needs to occur. 
 
 ## Continuous Delivery vs Continuous Development 
 

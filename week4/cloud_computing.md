@@ -124,7 +124,7 @@ So this is what the service is actually doing
 
 ### Cloud providers and USPs
 
-A USP stands for a Unique Selling Point-a feature or strength that give customers a reson to choose one provider over another.
+A USP stands for a Unique Selling Point-a feature or strength that give customers a reason to choose one provider over another.
 
 For most cloud providers it will either b experience within the field such is the case for AWS, or integration into that providers specific eco-system like microsoft or google. 
 
