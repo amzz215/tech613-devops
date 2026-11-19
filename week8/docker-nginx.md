@@ -86,7 +86,7 @@ nano index.html
 - `apt-get install nano` installs the text editor because it wasn’t included in the container.
 - `nano index.html` opens the homepage so I can edit it. I changed the `<h1>` for the visible heading. The `<title>` controls the browser tab text.
 
-I pressed **Ctrl+O → Enter → Ctrl+X** to save and exit Nano, then refreshed `http://localhost` to check the change.
+I pressed **Ctrl+O -> Enter -> Ctrl+X** to save and exit Nano, then refreshed `http://localhost` to check the change.
 
 ```bash
 exit

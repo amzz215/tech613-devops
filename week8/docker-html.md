@@ -70,8 +70,6 @@ docker push amz101/tech613-nginx-auto:1.0
 - `docker login` signs me in to Docker Hub so I can upload images to my account.
 - `docker push` uploads my local image with the `1.0` tag. I make the repository public so other people can pull and run it.
 
-This is the command I share in the class chat:
-
 ```bash
 docker run -d -p 90:80 amz101/tech613-nginx-auto:1.0
 ```
