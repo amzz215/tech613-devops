@@ -183,8 +183,18 @@ Links to every project file and folder. Git internal files are excluded.
 
 [Open folder](./week8/)
 
+- [yaml-definitions/](./week8/yaml-definitions/)
 - [docker-compose.md](./week8/docker-compose.md)
 - [docker-html.md](./week8/docker-html.md)
 - [docker-nginx.md](./week8/docker-nginx.md)
 - [docker-ttt-app.md](./week8/docker-ttt-app.md)
 - [docker.md](./week8/docker.md)
+- [kubernetes.md](./week8/kubernetes.md)
+- [ttt-app-architecture-diagram.md](./week8/ttt-app-architecture-diagram.md)
+
+## week8/yaml-definitions/local-nginx-deploy
+
+[Open folder](./week8/yaml-definitions/local-nginx-deploy/)
+
+- [nginx-deploy.yaml](./week8/yaml-definitions/local-nginx-deploy/nginx-deploy.yaml)
+- [nginx-service.yaml](./week8/yaml-definitions/local-nginx-deploy/nginx-service.yaml)
