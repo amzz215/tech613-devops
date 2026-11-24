@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ttt-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ttt
+  template:
+    metadata:
+      labels:
+        app: ttt
+    spec:
+      containers:
+        - name: ttt
+          image: amz101/tech613-tttapp:1.2.0
+          env:
+            - name: MONGODB_URI
+              value: mongodb://mongo-service:27017/tictactoe
+          ports:
+            - containerPort: 3000
