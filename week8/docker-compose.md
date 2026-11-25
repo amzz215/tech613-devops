@@ -29,6 +29,7 @@ services:
       MONGODB_URI: mongodb://db:27017/tictactoe
     depends_on:
       - db
+    commands: sh -c "node seeds/seed.js && exec node index.js" #Auto start
 
 volumes:
   mongo-data:
@@ -60,7 +61,7 @@ I open http://localhost:3000 to check the app.
 docker compose exec app node seeds/seed.js
 ```
 
-This runs `node seeds/seed.js` inside my running app container. The script uses `MONGODB_URI` to connect to MongoDB and add the starter scoreboard records. I check the output to confirm seeding succeeded.
+This runs `node seeds/seed.js` inside my running app container. The script uses `MONGODB_URI` to connect to MongoDB and add the starter scoreboard records. I check the output to confirm seeding succeeded. This is manual seeding though. 
 
 ## Check logs and images
 

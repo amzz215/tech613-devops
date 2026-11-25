@@ -41,7 +41,7 @@ COPY index.html /usr/share/nginx/html/index.html
 With Docker Desktop running, I run these commands from my project folder:
 
 ```bash
-docker build -t amz101/tech613-nginx-auto:1.0 .
+docker build -t amz101/tech613-nginx-auto:1 .
 docker images
 ```
 
