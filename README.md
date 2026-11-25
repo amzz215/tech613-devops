@@ -189,8 +189,19 @@ Links to every project file and folder. Git internal files are excluded.
 - [docker-nginx.md](./week8/docker-nginx.md)
 - [docker-ttt-app.md](./week8/docker-ttt-app.md)
 - [docker.md](./week8/docker.md)
+- [HPA.md](./week8/HPA.md)
 - [kubernetes.md](./week8/kubernetes.md)
 - [ttt-app-architecture-diagram.md](./week8/ttt-app-architecture-diagram.md)
+
+## week8/yaml-definitions
+
+[Open folder](./week8/yaml-definitions/)
+
+- [local-nginx-deploy/](./week8/yaml-definitions/local-nginx-deploy/)
+- [local-ttt-app-deploy/](./week8/yaml-definitions/local-ttt-app-deploy/)
+- [local-ttt-app-mongo-deploy/](./week8/yaml-definitions/local-ttt-app-mongo-deploy/)
+- [local-ttt-app-mongo-pv-deploy/](./week8/yaml-definitions/local-ttt-app-mongo-pv-deploy/)
+- [TTT-app-deployment.md](./week8/yaml-definitions/TTT-app-deployment.md)
 
 ## week8/yaml-definitions/local-nginx-deploy
 
@@ -198,3 +209,30 @@ Links to every project file and folder. Git internal files are excluded.
 
 - [nginx-deploy.yaml](./week8/yaml-definitions/local-nginx-deploy/nginx-deploy.yaml)
 - [nginx-service.yaml](./week8/yaml-definitions/local-nginx-deploy/nginx-service.yaml)
+
+## week8/yaml-definitions/local-ttt-app-deploy
+
+[Open folder](./week8/yaml-definitions/local-ttt-app-deploy/)
+
+- [ttt-deploy.yaml](./week8/yaml-definitions/local-ttt-app-deploy/ttt-deploy.yaml)
+- [ttt-service.yaml](./week8/yaml-definitions/local-ttt-app-deploy/ttt-service.yaml)
+
+## week8/yaml-definitions/local-ttt-app-mongo-deploy
+
+[Open folder](./week8/yaml-definitions/local-ttt-app-mongo-deploy/)
+
+- [mongo-deploy.yaml](./week8/yaml-definitions/local-ttt-app-mongo-deploy/mongo-deploy.yaml)
+- [mongo-service.yaml](./week8/yaml-definitions/local-ttt-app-mongo-deploy/mongo-service.yaml)
+- [ttt-deploy.yaml](./week8/yaml-definitions/local-ttt-app-mongo-deploy/ttt-deploy.yaml)
+- [ttt-service.yaml](./week8/yaml-definitions/local-ttt-app-mongo-deploy/ttt-service.yaml)
+
+## week8/yaml-definitions/local-ttt-app-mongo-pv-deploy
+
+[Open folder](./week8/yaml-definitions/local-ttt-app-mongo-pv-deploy/)
+
+- [mongo-deploy.yaml](./week8/yaml-definitions/local-ttt-app-mongo-pv-deploy/mongo-deploy.yaml)
+- [mongo-service.yaml](./week8/yaml-definitions/local-ttt-app-mongo-pv-deploy/mongo-service.yaml)
+- [mongo-storage.yaml](./week8/yaml-definitions/local-ttt-app-mongo-pv-deploy/mongo-storage.yaml)
+- [ttt-deploy.yaml](./week8/yaml-definitions/local-ttt-app-mongo-pv-deploy/ttt-deploy.yaml)
+- [ttt-hpa.yaml](./week8/yaml-definitions/local-ttt-app-mongo-pv-deploy/ttt-hpa.yaml)
+- [ttt-service.yaml](./week8/yaml-definitions/local-ttt-app-mongo-pv-deploy/ttt-service.yaml)
