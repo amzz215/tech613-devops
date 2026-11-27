@@ -1,3 +1,5 @@
+[CI/CD overview and contents](./CICD.md) | [Jobs 1-3 and webhook setup](./cicd-setup.md)
+
 ## Setting Up SSH for GitHub
 
 I use SSH to authenticate with GitHub when I push from Git Bash. I set it up locally first so I can check that SSH works before using it in Jenkins.

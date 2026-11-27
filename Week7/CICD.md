@@ -1,5 +1,28 @@
 # CI/CD
 
+## Table of Contents
+
+- [What is it?](#what-is-it)
+  - [CI](#ci)
+- [Continuous Delivery vs Continuous Development](#continuous-delivery-vs-continuous-development)
+- [What Jenkins does?](#what-jenkins-does)
+- [Why build a pipeline](#why-build-a-pipeline)
+- [Pipeline](#pipeline)
+- [What is a webhook](#what-is-a-webhook)
+- [Jenkins architecture](#jenkins-architecture)
+- [Source Code Management (SCM)](#source-code-management-scm)
+    - [Understanding CI vs CD](#understanding-ci-vs-cd)
+    - [Why is deploying tested code important?](#why-is-deploying-tested-code-important)
+  - [Authentication](#authentication)
+  - [Setting Up the Dedicated CI/CD GitHub Repository and Planning the Jenkins Jobs.](#setting-up-the-dedicated-cicd-github-repository-and-planning-the-jenkins-jobs)
+- [Final Result](#final-result)
+
+## Setup Notes
+
+- [SSH authentication setup](./ssh-setup.md)
+- [Jobs 1-3 and webhook setup](./cicd-setup.md)
+- [Final deployed homepage](#final-result)
+
 ## What is it?
 
 ### CI 
@@ -46,6 +69,20 @@ Alternatives such as Github Actions and Azure Pipelines also are able to indepen
 - I ensure high quality code is pushed to merge and if all pass checks it merges to main 
 
 ## Pipeline 
+
+```mermaid
+%%{init: {"themeVariables": {"edgeLabelBackground": "#dbeafe"}}}%%
+flowchart TD
+    A["I push a homepage change to dev"] --> B["GitHub webhook notifies Jenkins"]
+    B --> C["Job 1: Build and test dev"]
+    C --> D{"Tests pass?"}
+    D -->|No| E["Pipeline stops"]
+    D -->|Yes| F["Job 2: Merge dev into main and push"]
+    F -->|Successful build| G["Job 3: Copy app to EC2 and restart with PM2"]
+    G --> H["Homepage displays the updated date and time"]
+    classDef default fill:#dbeafe,stroke:#2563eb,color:#172554
+    linkStyle default stroke:#2563eb,color:#172554
+```
 
 1. Git push - needs a webhook, needs jenkins to be looking out for this webhook 
 2. I run tests
@@ -159,7 +196,12 @@ tech613-jenkins-cicd/
 5. I configure Job 2 to merge successfully tested changes into main.
 6. I configure Job 3 to deploy the tested code to EC2, including the necessary SSH access.
 
+## Final Result
 
+1. I added the date and time to the homepage and pushed the change to `dev`.
+2. The webhook triggered Job 1 to build and test the change. After it passed, Job 2 merged it into `main` and Job 3 deployed the updated app to EC2.
+3. I opened the deployed homepage and checked the footer. It shows `v1.2.0 16/11/26 10:26`.
 
+The date and time at the bottom were the change I delivered through my CI/CD pipeline. This is the final result: the updated homepage is running on EC2 without me manually copying the files or restarting the app.
 
-
+![Deployed homepage showing v1.2.0 and the date and time added through CI/CD](<../images/Week7/Screenshot 2026-11-16 102754.png>)

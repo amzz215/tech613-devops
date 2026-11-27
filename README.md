@@ -11,6 +11,7 @@ Links to every project file and folder. Git internal files are excluded.
 - [GitHubExample/](./GitHubExample/)
 - [images/](./images/)
 - [linux/](./linux/)
+- [Pre-assignment/](./Pre-assignment/)
 - [week2/](./week2/)
 - [week4/](./week4/)
 - [week5/](./week5/)
@@ -32,6 +33,8 @@ Links to every project file and folder. Git internal files are excluded.
 
 [Open folder](./images/)
 
+- [Pre-assignment/](./images/Pre-assignment/)
+- [Week7/](./images/Week7/)
 - [week5/](./images/week5/)
 - [week6/](./images/week6/)
 - [DBZ-Goku-PNG-Transparent-Image.png](./images/DBZ-Goku-PNG-Transparent-Image.png)
@@ -97,6 +100,24 @@ Links to every project file and folder. Git internal files are excluded.
 - [image-9.png](./images/week6/image-9.png)
 - [image.png](./images/week6/image.png)
 
+## images/Week7
+
+[Open folder](./images/Week7/)
+
+- [Screenshot 2026-11-16 102754.png](./images/Week7/Screenshot%202026-11-16%20102754.png)
+
+## images/Pre-assignment
+
+[Open folder](./images/Pre-assignment/)
+
+- [week1/](./images/Pre-assignment/week1/)
+
+## images/Pre-assignment/week1
+
+[Open folder](./images/Pre-assignment/week1/)
+
+- [image.png](./images/Pre-assignment/week1/image.png)
+
 ## linux
 
 [Open folder](./linux/)
@@ -108,6 +129,25 @@ Links to every project file and folder. Git internal files are excluded.
 [Open folder](./linux/scripts/)
 
 - [install-nginx.sh](./linux/scripts/install-nginx.sh)
+
+## Pre-assignment
+
+[Open folder](./Pre-assignment/)
+
+- [week1/](./Pre-assignment/week1/)
+- [week2/](./Pre-assignment/week2/)
+
+## Pre-assignment/week1
+
+[Open folder](./Pre-assignment/week1/)
+
+- [DevOps.md](./Pre-assignment/week1/DevOps.md)
+- [OS.md](./Pre-assignment/week1/OS.md)
+
+## Pre-assignment/week2
+
+[Open folder](./Pre-assignment/week2/)
+
 
 ## week2
 
